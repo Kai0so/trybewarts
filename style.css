@@ -34,3 +34,7 @@ main {
 #email-input-container {
     display: flex;
 }
+
+footer {
+  text-align: center;
+}

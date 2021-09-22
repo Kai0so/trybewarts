@@ -1,6 +1,9 @@
 const getButton = document.querySelector('#login-button');
 const getLogin = document.querySelector('#email-input');
 const getPassword = document.querySelector('#password-input');
+const getSubmitButton = document.querySelector('#submit-btn');
+const getInputCheckbox = document.querySelector('#agreement');
+
 const trybeUser = 'tryber@teste.com';
 const trybePassword = '123456';
 
@@ -15,3 +18,15 @@ function checkLogin() {
 }
 
 getButton.addEventListener('click', checkLogin);
+
+getSubmitButton.disabled = true;
+
+getInputCheckbox.addEventListener('input', function(event){
+  let conteudo = getInputCheckbox.value;
+  if (conteudo === 'true') {
+    getSubmitButton.disabled = false;
+  } else if (conteudo === 'unchecked') {
+    getSubmitButton.disabled = true;
+  } 
+})
+
