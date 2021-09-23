@@ -23,7 +23,7 @@ function checkBox() {
   const checkBoxContent = getInputCheckbox.checked;
   if (checkBoxContent === true) {
     getSubmitButton.disabled = false;
-  } else if (checkBoxContent === false) {
+  } else {
     getSubmitButton.disabled = true;
   }
 }
