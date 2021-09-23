@@ -4,7 +4,6 @@ const getPassword = document.querySelector('#password-input');
 const getSubmitButton = document.querySelector('#submit-btn');
 const getInputCheckbox = document.querySelector('#agreement');
 const getTextArea = document.querySelector('#textarea');
-
 const trybeUser = 'tryber@teste.com';
 const trybePassword = '123456';
 
@@ -20,20 +19,20 @@ function checkLogin() {
 
 getButton.addEventListener('click', checkLogin);
 
-getSubmitButton.disabled = true;
-
 function checkBox() {
-  const conteudo = getInputCheckbox.value;
-  if (conteudo === 'true') {
+  const checkBoxContent = getInputCheckbox.checked;
+  if (checkBoxContent === true) {
     getSubmitButton.disabled = false;
-  } else if (conteudo === 'unchecked') {
+  } else if (checkBoxContent === false) {
     getSubmitButton.disabled = true;
   }
 }
+
 getInputCheckbox.addEventListener('input', checkBox);
 
 function countDown(event) {
   const sub = event.target.maxLength - event.target.textLength;
   document.querySelector('#counter').innerHTML = `Máximo de caracteres: ${sub}`;
 }
+
 getTextArea.addEventListener('keyup', countDown);
