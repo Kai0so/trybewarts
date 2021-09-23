@@ -22,16 +22,18 @@ getButton.addEventListener('click', checkLogin);
 
 getSubmitButton.disabled = true;
 
-getInputCheckbox.addEventListener('input', function(event) {
-  let conteudo = getInputCheckbox.value;
+function checkBox() {
+  const conteudo = getInputCheckbox.value;
   if (conteudo === 'true') {
     getSubmitButton.disabled = false;
   } else if (conteudo === 'unchecked') {
     getSubmitButton.disabled = true;
-  } 
-})
+  }
+}
+getInputCheckbox.addEventListener('input', checkBox);
 
-getTextArea.addEventListener('keyup', function(event){
-  let sub = event.target.maxLength - event.target.textLength;
+function countDown(event) {
+  const sub = event.target.maxLength - event.target.textLength;
   document.querySelector('#counter').innerHTML = `Máximo de caracteres: ${sub}`;
-});
+}
+getTextArea.addEventListener('keyup', countDown);
