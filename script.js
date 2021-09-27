@@ -2,6 +2,8 @@
 const getButton = document.querySelector('#login-button');
 const getLogin = document.querySelector('#email-input');
 const getPassword = document.querySelector('#password-input');
+const trybeUser = 'tryber@teste.com';
+const trybePassword = '123456';
 
 // forms main
 const formulario = document.querySelector('#evaluation-form');
@@ -12,9 +14,6 @@ const getSelect = document.querySelector('#house');
 const getTextArea = document.querySelector('#textarea');
 const getInputCheckbox = document.querySelector('#agreement');
 const getSubmitButton = document.querySelector('#submit-btn');
-
-const trybeUser = 'tryber@teste.com';
-const trybePassword = '123456';
 
 function checkLogin() {
   const inputName = getLogin.value.trim();
